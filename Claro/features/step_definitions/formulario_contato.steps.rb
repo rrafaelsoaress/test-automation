@@ -31,9 +31,8 @@ Quando("clicar no botão") do
   find("input[type=submit]").click
 end
 
-Então("retorno para a home") do
-  sleep 5
-  expect(current_url).to eq("http://www.appanamaria.com.br")
+Então("valido que a mensagem foi enviada") do
+  assert_text("Sua mensagem foi enviada com sucesso!")
 end
 
 
