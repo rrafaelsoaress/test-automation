@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<title>Navegação</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Navegação_Basica</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://www.tododiacomanamaria.com.br<datalist><option>http://www.diaadiacomanamaria.com.br/index</option><option>http://www.diaadiacomanamaria.com.br</option><option>http://www.tododiacomanamaria.com.br</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Ajuda<datalist><option>link=AJUDA</option><option>//a[contains(text(),'AJUDA')]</option><option>//a[contains(@href, './ajuda')]</option><option>//li[2]/a</option><option>link=Ajuda</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyLocation</td><td>http://www.tododiacomanamaria.com.br/ajuda<datalist><option>http://www.diaadiacomanamaria.com.br/ajuda</option><option>http://www.tododiacomanamaria.com.br/ajuda</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Contato<datalist><option>xpath=(//a[contains(text(),'CONTATO')])[3]</option><option>xpath=(//a[contains(@href, './contato')])[3]</option><option>//footer[2]/div/div/div/ul/li[4]/a</option><option>link=CONTATO</option><option>link=Contato</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyLocation</td><td>http://www.tododiacomanamaria.com.br/contato<datalist><option>http://www.diaadiacomanamaria.com.br/contato</option><option>http://www.tododiacomanamaria.com.br/contato</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Termos de Uso<datalist><option>xpath=(//a[contains(text(),'TERMOS DE USO')])[3]</option><option>xpath=(//a[contains(@href, './termos-de-uso')])[3]</option><option>//li[5]/a</option><option>link=TERMOS DE USO</option><option>link=Termos de Uso</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyLocation</td><td>http://www.tododiacomanamaria.com.br/termos<datalist><option>http://www.diaadiacomanamaria.com.br/contato</option><option>http://www.diaadiacomanamaria.com.br/termos-de-uso</option><option>http://www.tododiacomanamaria.com.br/termos</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Validação_URL_lojas</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://www.tododiacomanamaria.com.br/index<datalist><option>http://www.tododiacomanamaria.com.br/index</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Baixar na Play Store<datalist><option>link=Baixar na Play Store</option><option>//a[contains(text(),'Baixar na Play Store')]</option><option>xpath=(//a[contains(@href, 'https://play.google.com/store/apps/details?id=br.com.gold360.tim.anamariabraga&amp;referrer=utm_source%3Dlandingpage')])[2]</option><option>//p[2]/a</option><option>css=a.bt-play-store</option></datalist></td><td></td>
+</tr>
+<tr><td>selectWindow</td><td>win_ser_1<datalist><option>win_ser_1</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyLocation</td><td>https://play.google.com/store/apps/details?id=br.com.gold360.tim.anamariabraga&amp;referrer=utm_source%3Dlandingpage<datalist><option>https://play.google.com/store/apps/details?id=br.com.gold360.tim.anamariabraga&amp;referrer=utm_source%3Dlandingpage</option></datalist></td><td></td>
+</tr>
+<tr><td>close</td><td>win_ser_1<datalist><option>win_ser_1</option></datalist></td><td></td>
+</tr>
+<tr><td>selectWindow</td><td>win_ser_local<datalist><option>win_ser_local</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=faça download na Google Play<datalist><option>link=faça download na Google Play</option><option>//a[contains(text(),'faça download na Google Play')]</option><option>xpath=(//a[contains(@href, 'https://play.google.com/store/apps/details?id=br.com.gold360.tim.anamariabraga&amp;referrer=utm_source%3Dlandingpage')])[3]</option><option>//section[6]/div/div/div[2]/p/a</option><option>css=a.bt-store.play</option></datalist></td><td></td>
+</tr>
+<tr><td>selectWindow</td><td>win_ser_2<datalist><option>win_ser_2</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyLocation</td><td>https://play.google.com/store/apps/details?id=br.com.gold360.tim.anamariabraga&amp;referrer=utm_source%3Dlandingpage<datalist><option>https://play.google.com/store/apps/details?id=br.com.gold360.tim.anamariabraga&amp;referrer=utm_source%3Dlandingpage</option></datalist></td><td></td>
+</tr>
+<tr><td>close</td><td>win_ser_2<datalist><option>win_ser_2</option></datalist></td><td></td>
+</tr>
+<tr><td>selectWindow</td><td>win_ser_local<datalist><option>win_ser_local</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>xpath=(//a[contains(text(),'Baixar na Play Store')])[2]<datalist><option>xpath=(//a[contains(text(),'Baixar na Play Store')])[2]</option><option>xpath=(//a[contains(@href, 'https://play.google.com/store/apps/details?id=br.com.gold360.tim.anamariabraga&amp;referrer=utm_source%3Dlandingpage')])[4]</option><option>//p[4]/a</option><option>css=section.fluid-container.section-3 &gt; div.container &gt; div.row &gt; div.col-md-6 &gt; p.success &gt; a.bt-play-store</option></datalist></td><td></td>
+</tr>
+<tr><td>selectWindow</td><td>win_ser_3<datalist><option>win_ser_3</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyLocation</td><td>https://play.google.com/store/apps/details?id=br.com.gold360.tim.anamariabraga&amp;referrer=utm_source%3Dlandingpage<datalist><option>https://play.google.com/store/apps/details?id=br.com.gold360.tim.anamariabraga&amp;referrer=utm_source%3Dlandingpage</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
