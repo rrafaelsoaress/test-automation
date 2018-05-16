@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<title>Formulário</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Preencher_todos_os_campos</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://www.oianamaria.com.br/contato<datalist><option>http://www.tododiacomanamaria.com.br/index</option><option>http://www.oianamaria.com.br/contato</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=nome<datalist><option>name=nome</option><option>//input[@name='nome']</option><option>//input</option><option>css=input[name="nome"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=nome<datalist><option>name=nome</option><option>//input[@name='nome']</option><option>//input</option><option>css=input[name="nome"]</option></datalist></td><td>Teste</td>
+</tr>
+<tr><td>click</td><td>name=email<datalist><option>name=email</option><option>//input[@name='email']</option><option>//div[2]/fieldset/input</option><option>css=input[name="email"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=email<datalist><option>name=email</option><option>//input[@name='email']</option><option>//div[2]/fieldset/input</option><option>css=input[name="email"]</option></datalist></td><td>teste@teste.com</td>
+</tr>
+<tr><td>click</td><td>name=celular<datalist><option>name=celular</option><option>//input[@name='celular']</option><option>//fieldset[2]/input</option><option>css=input[name="celular"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=celular<datalist><option>name=celular</option><option>//input[@name='celular']</option><option>//fieldset[2]/input</option><option>css=input[name="celular"]</option></datalist></td><td>(11) 95978-5990</td>
+</tr>
+<tr><td>click</td><td>name=assunto<datalist><option>name=assunto</option><option>//input[@name='assunto']</option><option>//div[2]/fieldset[2]/input</option><option>css=input[name="assunto"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Sugestões<datalist><option>link=Sugestões</option><option>//a[contains(text(),'Sugestões')]</option><option>xpath=(//a[contains(@href, '#')])[4]</option><option>//fieldset[2]/ul/li[3]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=mensagem<datalist><option>name=mensagem</option><option>//textarea[@name='mensagem']</option><option>//textarea</option><option>css=textarea[name="mensagem"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=mensagem<datalist><option>name=mensagem</option><option>//textarea[@name='mensagem']</option><option>//textarea</option><option>css=textarea[name="mensagem"]</option></datalist></td><td>Teste Selenium</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Enviar']<datalist><option>//input[@value='Enviar']</option><option>//div[3]/input</option><option>css=input.enviar.red.btn</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyText</td><td>//div[3]/p<datalist><option>//div[3]/p</option><option>css=p.success</option></datalist></td><td>Sua mensagem foi enviada com sucesso!</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Não_preencher_nenhum_campo</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://www.oianamaria.com.br/contato<datalist><option>http://www.diaadiacomanamaria.com.br/index</option><option>http://www.tododiacomanamaria.com.br</option><option>http://www.oianamaria.com.br/contato</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//input[@value='Enviar']<datalist><option>//input[@value='Enviar']</option><option>//div[3]/input</option><option>css=input.enviar.red.btn</option></datalist></td><td></td>
+</tr>
+<tr><td>verifyTextPresent</td><td><datalist><option></option></datalist></td><td>Preencha este campo.</td>
+</tr>
+</tbody></table>
+</body>
+</html>
