@@ -11,11 +11,7 @@
 <tr><td rowspan="1" colspan="3">Preencher_todos_os_campos</td></tr>
 </thead>
 <tbody>
-<tr><td>open</td><td>http://www.diaadiacomanamaria.com.br<datalist><option>http://www.diaadiacomanamaria.com.br/index</option><option>http://www.diaadiacomanamaria.com.br</option></datalist></td><td></td>
-</tr>
-<tr><td>click</td><td>link=CONTATO<datalist><option>link=CONTATO</option><option>//a[contains(text(),'CONTATO')]</option><option>//a[contains(@href, './contato')]</option><option>//li[3]/a</option></datalist></td><td></td>
-</tr>
-<tr><td>verifyLocation</td><td>http://www.diaadiacomanamaria.com.br/contato<datalist><option>http://www.diaadiacomanamaria.com.br/contato</option></datalist></td><td></td>
+<tr><td>open</td><td>http://www.appanamaria.com.br/contato<datalist><option>http://www.diaadiacomanamaria.com.br/index</option><option>http://www.diaadiacomanamaria.com.br</option><option>http://www.appanamaria.com.br/contato</option></datalist></td><td></td>
 </tr>
 <tr><td>click</td><td>name=nome<datalist><option>name=nome</option><option>//input[@name='nome']</option><option>//input</option><option>css=input[name="nome"]</option></datalist></td><td></td>
 </tr>
@@ -39,15 +35,15 @@
 </tr>
 <tr><td>click</td><td>//input[@value='Enviar']<datalist><option>//input[@value='Enviar']</option><option>//div[3]/input</option><option>css=input.enviar.red.btn</option></datalist></td><td></td>
 </tr>
+<tr><td>verifyText</td><td>//div[3]/p<datalist><option>//div[3]/p</option><option>css=p.success</option></datalist></td><td>Sua mensagem foi enviada com sucesso!</td>
+</tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">Não_preencher_nenhum_campo</td></tr>
 </thead>
 <tbody>
-<tr><td>open</td><td>http://www.diaadiacomanamaria.com.br/index<datalist><option>http://www.diaadiacomanamaria.com.br/index</option></datalist></td><td></td>
-</tr>
-<tr><td>click</td><td>link=CONTATO<datalist><option>link=CONTATO</option><option>//a[contains(text(),'CONTATO')]</option><option>//a[contains(@href, './contato')]</option><option>//li[3]/a</option></datalist></td><td></td>
+<tr><td>open</td><td>http://www.appanamaria.com.br/contato<datalist><option>http://www.diaadiacomanamaria.com.br/index</option><option>http://www.appanamaria.com.br/contato</option></datalist></td><td></td>
 </tr>
 <tr><td>click</td><td>//input[@value='Enviar']<datalist><option>//input[@value='Enviar']</option><option>//div[3]/input</option><option>css=input.enviar.red.btn</option></datalist></td><td></td>
 </tr>
