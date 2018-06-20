@@ -10,7 +10,7 @@ Funcionalidade: Navegando na LP
 Cenario: Acessar o menu Ajuda
 
 	Dado que eu acesse o Dia a Dia com Ana Maria Braga
-	#Quando eu scrollar a tela
+	Quando eu scrollar a tela
 	E clicar no menu Ajuda
 	Então validar que fui direcionado para a pagina Ajuda
 

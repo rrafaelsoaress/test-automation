@@ -1,3 +1,5 @@
+#language: pt
+#utf-8
 #1scenario
 #Cenario: Acessar o menu Ajuda
 
