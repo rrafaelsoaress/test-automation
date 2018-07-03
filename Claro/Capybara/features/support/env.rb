@@ -1,19 +1,29 @@
-require 'rspec'
-require 'cucumber'
-require 'selenium/webdriver'
+require 'capybara'
 require 'capybara/dsl'
+require 'capybara/rspec/matchers'
+require 'selenium/webdriver'
+require 'rspec'
+# require 'pry'
+# require 'faker'
 
+World(Capybara::DSL)
+World(Capybara::RSpecMatchers)
 
-include Capybara::DSL
 
 Capybara.register_driver :selenium do |app|
-	caps = Selenium::WebDriver::Remote::Capabilities.chrome("chromeOptions" => {"args" => [ "--start-maximized" ]})
-	Capybara::Selenium::Driver.new(app, {:browser => :chrome, :desired_capabilities => caps})
-	
+  Capybara::Selenium::Driver.new(
+    app,
+    browser: :chrome,
+    desired_capabilities: Selenium::WebDriver::Remote::Capabilities.chrome(
+        'chromeOptions' => { 'args' => ['--disable-infobars',
+                        'start-maximized'] }
+    )
+  )
 end
 
+
 Capybara.configure do |config|
- config.current_driver = :selenium
- config.default_max_wait_time = 3
+ config.default_driver = :selenium
+ config.default_max_wait_time = 10
 end
 

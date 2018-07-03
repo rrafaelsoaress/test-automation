@@ -59,7 +59,7 @@ Quando("clicar na quinta pergunta") do
 end
 
 Quando("validar o texto da quinta pergunta") do
-  assert_text("O aplicativo Vida Prática com Ana Maria Braga pode ser baixado gratuitamente. Você pode ler até 10 conteúdos à sua escolha. A partir do 11º conteúdo, você poderá fazer sua assinatura pelo próprio aplicativo ou pelo site www.appanamaria.com.br. Na primeira assinatura, é concedida a gratuidade de 3 dias, com acesso ilimitado ao conteúdo do aplicativo. A partir do 4º dia, você paga apenas R$ 3,99 por semana pela assinatura.")
+  assert_text("O aplicativo Vida Prática com Ana Maria Braga pode ser baixado gratuitamente. Você pode ler até 10 conteúdos à sua escolha. A partir do 11º conteúdo, você poderá fazer sua assinatura pelo próprio aplicativo ou pelo site www.appanamaria.com.br. Na primeira assinatura, é concedida a gratuidade de 3 dias, com acesso ilimitado ao conteúdo do aplicativo. A partir do 4º dia, você paga apenas R$ 4,99 por semana pela assinatura.")
   page.execute_script "window.scrollBy(0,100)"
 end
 
