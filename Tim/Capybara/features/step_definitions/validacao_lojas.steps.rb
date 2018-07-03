@@ -6,7 +6,7 @@ Quando("scrollar a tela") do
 end
 
 Quando("clicar no botão do Google Play") do
-  find(:xpath, "/html/body/header/div/div/div[2]/form/p[3]/a").click
+  find(:xpath, "/html/body/header/div/div/div[2]/p[2]/a").click
 end
 
 Então("deve ser direcionado para a loja Google Play") do

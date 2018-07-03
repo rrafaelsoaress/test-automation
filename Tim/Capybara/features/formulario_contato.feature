@@ -13,7 +13,7 @@ Cenario: Enviar uma sugestão/reclamação/elogio/dúvida sobre funcionamento
 	Dado que eu esteja na aba contato
 	Quando eu preecher os dados
 	E clicar no botão
-	Então retorno para a home
+	Então validar a mensagem de sucesso
 
 
 @2scenario
