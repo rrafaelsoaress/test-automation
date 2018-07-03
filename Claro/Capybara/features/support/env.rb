@@ -3,8 +3,8 @@ require 'capybara/dsl'
 require 'capybara/rspec/matchers'
 require 'selenium/webdriver'
 require 'rspec'
-# require 'pry'
-# require 'faker'
+require 'pry'
+require 'faker'
 
 World(Capybara::DSL)
 World(Capybara::RSpecMatchers)
