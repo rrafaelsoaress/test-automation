@@ -19,35 +19,48 @@ Funcionalidade: Preecher formulario de Contato
 		Dado que eu envie um elogio
 		Então vejo a mensagem de confirmação "Sua mensagem foi enviada com sucesso!"
 
-	# @2scenario
-	# Cenario: Não preencher nenhum campo
-	# 	Quando eu clicar no botão Enviar
-	# 	Então deve apresentar mensagem de erro
+
+	@3scenario
+	Cenario: Enviar uma sugestão
+		Dado que eu envie uma sugestão
+		Então vejo a mensagem de confirmação "Sua mensagem foi enviada com sucesso!"
+
+	
+	@4scenario
+	Cenario: Enviar uma reclamação
+		Dado que eu envie uma reclamação
+		Então vejo a mensagem de confirmação "Sua mensagem foi enviada com sucesso!"
 
 
-	# @3scenario
-	# Cenario: Preencher apenas o nome
-	# 	E preencher o nome
-	# 	Quando eu clicar no botão Enviar
-	# 	Então deve apresentar mensagem de erro
+	@5scenario
+	Cenario: Não preencher nenhum campo
+		Quando eu clicar no botão Enviar
+		Então deve apresentar mensagem "Please fill out this field."
 
 
-	# @4scenario
-	# Cenario: Preencher apenas o telefone	
-	# 	E preencher o telefone
-	# 	Quando eu clicar no botão Enviar
-	# 	Então deve apresentar mensagem de erro
+	@6scenario
+	Cenario: Preencher apenas o nome
+		E preencher o nome
+		Quando eu clicar no botão Enviar
+		Então deve apresentar mensagem "Please fill out this field."
 
 
-	# @5scenario
-	# Cenario: Preencher apenas o e-mail
-	# 	E preencher o email
-	# 	Quando eu clicar no botão Enviar
-	# 	Então deve apresentar mensagem de erro
+	@7scenario
+	Cenario: Preencher apenas o e-mail
+		E preencher o email
+		Quando eu clicar no botão Enviar
+		Então deve apresentar mensagem "Please fill out this field."
 
 
-	# @6scenario
-	# Cenario: Preencher apenas a mensagem
-	# 	E incluir uma mensagem
-	# 	Quando eu clicar no botão Enviar
-	# 	Então deve apresentar mensagem de erro
+	@8scenario
+	Cenario: Preencher apenas o telefone	
+		E preencher o telefone
+		Quando eu clicar no botão Enviar
+		Então deve apresentar mensagem "Please fill out this field."
+
+
+	@9scenario
+	Cenario: Preencher apenas a mensagem
+		E incluir uma mensagem
+		Quando eu clicar no botão Enviar
+		Então deve apresentar mensagem "Please fill out this field."
