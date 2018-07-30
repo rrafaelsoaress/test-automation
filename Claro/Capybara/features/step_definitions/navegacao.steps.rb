@@ -1,21 +1,19 @@
 #language: pt
 #utf-8
+
+#Contexto
+Dado("que eu acesse o Vida Prática com Ana Maria Braga") do
+  @home_page.load
+end
+
 #1scenario
 #Cenario: Acessar o menu Ajuda
 
-Dado("que eu acesse o Vida Prática com Ana Maria Braga") do
-  visit "http://www.appanamaria.com.br"
-end
-
-Quando("eu scrollar a tela") do
-  page.execute_script "window.scrollBy(0,10000)"
-end
-
 Quando("clicar no menu Ajuda") do
-  click_link('Ajuda')
+  @home_page.botao_ajuda.click
 end
 
-Quando ("validar que fui direcionado para a pagina Ajuda") do
+Quando ("validar que sou direcionado para a pagina Ajuda") do
   expect(current_url).to eq("http://www.appanamaria.com.br/ajuda")
 end
 
@@ -24,10 +22,10 @@ end
 #Cenario: Acessar o menu Contato
 
 Quando("clicar no menu contato") do
-  click_link('Contato')
+  @home_page.botao_contato.click
 end
 
-Então("validar que fui direcionado para a pagina Contato") do
+Então("validar que sou direcionado para a pagina Contato") do
   expect(current_url).to eq('http://www.appanamaria.com.br/contato')
 end
 
@@ -36,10 +34,10 @@ end
 #Cenario: Acessar o menu Termos
 
 Quando("clicar no menu termos de uso") do
-  click_link('Termos de Uso')
+  @home_page.botao_termos.click
 end
 
-Então("validar que fui direcionado para a pagina Termos") do
+Então("validar que sou direcionado para a pagina Termos") do
   expect(current_url).to eq('http://www.appanamaria.com.br/termos-de-uso')
 end
 
@@ -48,10 +46,9 @@ end
 #Cenario: Acessar o menu Politica de Privacidade
 
 Quando("clicar no menu politica de privacidade") do
-  click_link('Política de Privacidade')
+  @home_page.botao_politica.click
 end
 
-Então("validar que sou direcionado para o site da Tim Politica de Privacidade") do
-  sleep 5
-	 expect(current_url).to eq('http://www.appanamaria.com.br/politica-de-privacidade')
+Então("validar que sou direcionado para a pagina Politica de Privacidade") do
+	expect(current_url).to eq('http://www.appanamaria.com.br/politica-de-privacidade')
 end

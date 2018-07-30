@@ -1,86 +1,22 @@
+#2feature
 #1scenario
-#Cenario: sugestão/reclamação/elogio/dúvida sobre funcionamento
+#Cenario: Enviar uma duvida
 
 Dado("que eu esteja na aba contato") do
-  visit "http://www.appanamaria.com.br"
-  page.execute_script "window.scrollBy(0,10000)"
-  click_link('Contato')
+  @formulario_page.load
 end
 
-Quando("eu preecher os dados") do
-  #Incluindo nome
-  find("input[type=text][placeholder='Nome completo*']").click
-  fill_in("Nome completo*", :with => "teste")
-  #Incluindo celular
-  find("input[type=tel][placeholder='Número de Celular*']").click
-  fill_in("Número de Celular*", :with => "11959785990")
-  #Incluindo email
-  find("input[type=text][placeholder='E-mail*']").click
-  fill_in("E-mail*", :with => "teste@teste.com.br")
-  page.execute_script "window.scrollBy(0,400)"
-  #Clicando no assunto
-  find(:xpath, "/html/body/section/div/div/form/div[2]/fieldset[2]/input[1]").click
-  #Selecionando assunto
-  click_link('Sugestões')
-  #Incluindo mensagem
-  find(:xpath, "/html/body/section/div/div/form/div[3]/fieldset/textarea").click
-  fill_in("Mensagem*", :with => "Teste automatizado")
-  end
-
-Quando("clicar no botão") do
-  find("input[type=submit]").click
+Dado("que eu envie uma duvida") do
+  @formulario_page.enviar_duvida
 end
 
-Então("valido que a mensagem foi enviada") do
-  assert_text("Sua mensagem foi enviada com sucesso!")
+Então("vejo a mensagem de confirmação {string}") do |mensagem|
+  @formulario_page.wait_for_mensagem
+  expect(@formulario_page.mensagem).to have_content mensagem
 end
-
 
 #2scenario
-#Cenario: Cenario: Não preencher nenhum campo
 
-Quando("eu clicar no botão Enviar") do
-  page.execute_script "window.scrollBy(0,10000)"
-  find("input[type=submit]").click
-end
-
-Então("deve apresentar mensagem de erro") do
-  page.has_text?("Preencha este campo.")
-end
-
-
-#3scenario
-#Cenario: Preencher apenas o nome
-
-Quando("preencher o nome") do
-  find("input[type=text][placeholder='Nome completo*']").click
-  fill_in("Nome completo*", :with => "teste")
-end
-
-
-#4scenario
-#Cenario: Preencher apenas o telefone
-
-Quando("preencher o telefone") do
-  find("input[type=tel][placeholder='Número de Celular*']").click
-  fill_in("Número de Celular*", :with => "11959785990")
-end
-
-
-#5scenario
-#Cenario: Preencher apenas o e-mail
-
-Quando("preencher o email") do
-  fill_in("E-mail*", :with => "teste@teste.com.br")
-  page.execute_script "window.scrollBy(0,400)"
-end
-
-
-#6scenario
-#Cenario: Preencher apenas a mensagem
-
-Quando("incluir uma mensagem") do
-  page.execute_script "window.scrollBy(0,10000)"
-  find(:xpath, "/html/body/section/div/div/form/div[3]/fieldset/textarea").click
-  fill_in("Mensagem*", :with => "Teste automatizado")
+Dado("que eu envie um elogio") do
+  @formulario_page.enviar_elogio
 end
