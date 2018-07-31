@@ -2,7 +2,7 @@
 #utf-8
 @1feature
 Funcionalidade: Navegando na LP
-	Como usuario da operadora
+	Como usuário da operadora
 	Quero navegar entre as abas
 	Para conhecer o produto
 
