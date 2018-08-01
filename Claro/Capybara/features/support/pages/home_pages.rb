@@ -6,4 +6,3 @@ class HomePage < SitePrism::Page
     element :botao_termos, 'footer a[href$=termos-de-uso]'
     element :botao_politica, 'footer a[href$=politica-de-privacidade]'
 end
-
