@@ -1,20 +1,20 @@
+#language: pt
+#utf-8
+
+#Contexto
+Dado("que eu acesse o Todo dia com Ana Maria") do
+  @home_page.load
+end
+
 #1scenario
 #Cenario: Acessar o menu Ajuda
 
-Dado("que eu acesse o Todo dia com Ana Maria") do
-  visit "http://www.tododiacomanamaria.com.br"
-end
-
-Quando("eu scrollar a tela") do
-  page.execute_script "window.scrollBy(0,10000)"
-end
-
 Quando("clicar no menu Ajuda") do
-  click_link('Ajuda')
+  @home_page.botao_ajuda.click
 end
 
 Quando ("validar que fui direcionado para a pagina Ajuda") do
-  expect(current_url).to eq("http://www.tododiacomanamaria.com.br/ajuda")
+  expect(current_url).to eq('http://www.tododiacomanamaria.com.br/ajuda')
 end
 
 
@@ -22,7 +22,7 @@ end
 #Cenario: Acessar o menu Contato
 
 Quando("clicar no menu contato") do
-  click_link('Contato')
+  @home_page.botao_contato.click
 end
 
 Então("validar que fui direcionado para a pagina Contato") do
@@ -34,7 +34,7 @@ end
 #Cenario: Acessar o menu Termos
 
 Quando("clicar no menu termos de uso") do
-  click_link('Termos de Uso')
+  @home_page.botao_termos.click
 end
 
 Então("validar que fui direcionado para a pagina Termos") do

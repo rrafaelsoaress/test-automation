@@ -1,12 +1,8 @@
 #1scenario
 #Cenario: Validar o botão do Google Play
 
-Quando("scrollar a tela") do
-  page.execute_script "window.scrollBy(0,100)"
-end
-
 Quando("clicar no botão do Google Play") do
-  find(:xpath, "/html/body/header/div/div/div[2]/p[2]/a").click
+  all('.bt-store.play').first.click
 end
 
 Então("deve ser direcionado para a loja Google Play") do
@@ -20,6 +16,5 @@ end
 #Cenario: Validar o botão do Google Play do footer
 
 Quando("clicar no botão do Google Play no footer") do
-  page.execute_script "window.scrollBy(0,5000)"
-  find(:xpath, "/html/body/section[6]/div/div/div[2]/p/a").click
+  all('.bt-store.play').last.click
 end
