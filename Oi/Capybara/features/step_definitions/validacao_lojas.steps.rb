@@ -1,12 +1,8 @@
 #1scenario
 #Cenario: Validar o botão do Google Play
 
-Quando("scrollar a tela") do
-  page.execute_script "window.scrollBy(0,100)"
-end
-
 Quando("clicar no botão do Google Play") do
-  find(:xpath, "//*[@id='signService']/p[3]/a[1]").click
+  all('.bt-store.play').first.click
 end
 
 Então("deve ser direcionado para a loja Google Play") do
@@ -19,7 +15,7 @@ end
 #Cenario: Validar o botão da App Store
 
 Quando("clicar no botão do App Store") do
-  find(:xpath, "//*[@id='signService']/p[3]/a[2]").click
+  all('.bt-store.app').first.click
 end
 
 Então("deve ser direcionado para a loja App Store") do
@@ -31,17 +27,13 @@ end
 #@3scenario
 #Cenario: Validar o botão do Google Play do footer
 
-Quando("scrollar a tela até o footer") do
-  page.execute_script "window.scrollBy(0,10000)"
-end
-
 Quando("clicar no botão do Google Play no footer") do
-  find(:xpath, "/html/body/section[8]/div/div/div[2]/p/a[1]").click
+  all('.bt-store.play').last.click
 end
 
 #@4scenario
 #Cenario: Validar o botão do App Store do footer
 
 Quando("clicar no botão do App Store no footer") do
-  find(:xpath, "/html/body/section[8]/div/div/div[2]/p/a[2]").click
+  all('.bt-store.app').last.click
 end
