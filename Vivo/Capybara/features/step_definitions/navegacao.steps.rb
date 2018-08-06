@@ -1,16 +1,17 @@
+#language: pt
+#utf-8
+
+#Contexto
+Dado("que eu acesse o Dia a Dia com Ana Maria Braga") do
+  @home_page.load
+end
+
+
 #1scenario
 #Cenario: Acessar o menu Ajuda
 
-Dado("que eu acesse o Dia a Dia com Ana Maria Braga") do
-  visit "http://www.diaadiacomanamaria.com.br/"
-end
-
-Quando("eu scrollar a tela") do
-  page.execute_script "window.scrollBy(0,10000)"
-end
-
 Quando("clicar no menu Ajuda") do
-  click_link('AJUDA')
+  @home_page.botao_ajuda.click
 end
 
 Quando ("validar que fui direcionado para a pagina Ajuda") do
@@ -22,7 +23,7 @@ end
 #Cenario: Acessar o menu Contato
 
 Quando("clicar no menu contato") do
-  click_link('CONTATO')
+  @home_page.botao_contato.click
 end
 
 Então("validar que fui direcionado para a pagina Contato") do
@@ -34,7 +35,7 @@ end
 #Cenario: Acessar o menu Termos
 
 Quando("clicar no menu termos de uso") do
-  click_link('TERMOS DE USO')
+  @home_page.botao_termos.click
 end
 
 Então("validar que fui direcionado para a pagina Termos") do

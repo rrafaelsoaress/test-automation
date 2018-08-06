@@ -1,1 +1,3 @@
-default: --no-source --color --format pretty
+default: --no-source --color -p bdd
+bdd: --format pretty
+dot: --format progress
